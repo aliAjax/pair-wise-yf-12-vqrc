@@ -251,10 +251,199 @@ textarea {
   padding: 32px 12px;
 }
 
+.metric em {
+  display: block;
+  margin-top: 6px;
+  font-style: normal;
+  font-size: 12px;
+  color: #8a93a6;
+}
+
+/* ---- 卸油差量索赔闭环 ---- */
+.claim-shell {
+  display: grid;
+  gap: 18px;
+}
+
+.tank-panel .hint,
+.register-form .hint {
+  margin: -6px 0 12px;
+  font-size: 12px;
+  color: #8a93a6;
+  line-height: 1.6;
+}
+
+.station-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.station-card {
+  border: 1px solid #dfe7f1;
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: #fbfcfe;
+  display: grid;
+  gap: 8px;
+}
+
+.station-card header {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.area-tag {
+  font-size: 12px;
+  color: #8a93a6;
+  white-space: nowrap;
+}
+
+.tank-line {
+  display: grid;
+  grid-template-columns: 58px 1fr auto;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  color: #536078;
+}
+
+.tank-line .bar-track {
+  height: 8px;
+}
+
+.bar-fill.warn {
+  background: linear-gradient(90deg, #c84b31, #e48a5f);
+}
+
+.tank-num {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.tank-num em {
+  font-style: normal;
+  color: #b7791f;
+  margin-left: 4px;
+}
+
+.muted {
+  color: #a9b2c3;
+}
+
+.claim-workspace {
+  display: grid;
+  grid-template-columns: minmax(300px, 380px) 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.register-form {
+  display: grid;
+  gap: 12px;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.cap-box {
+  border: 1px dashed #cfd8e5;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: #536078;
+  background: #f6f9fc;
+  line-height: 1.7;
+}
+
+.diff-box {
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+  color: #14724f;
+  background: #e8f4ef;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.diff-box.over {
+  color: #c84b31;
+  background: #fdecea;
+}
+
+.req {
+  color: #c84b31;
+}
+
+.banner {
+  margin: 0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.banner.ok {
+  color: #14724f;
+  background: #e8f4ef;
+}
+
+.banner.err {
+  color: #c84b31;
+  background: #fdecea;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filters select {
+  width: auto;
+  padding: 8px 10px;
+}
+
+.details span.over {
+  color: #c84b31;
+  font-weight: 700;
+}
+
+.status.st-frozen {
+  background: #fff5e0;
+  color: #b7791f;
+}
+
+.status.st-confirmed {
+  background: #e8f4ef;
+  color: #14724f;
+}
+
+.status.st-rejected {
+  background: #fdecea;
+  color: #c84b31;
+}
+
+.note.review {
+  background: #f3f0fb;
+}
+
+.review-input {
+  min-height: 60px;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 860px) {
   .app { padding: 18px; }
-  .topbar, .workspace { grid-template-columns: 1fr; }
+  .topbar, .claim-workspace { grid-template-columns: 1fr; }
   .stack { justify-content: flex-start; }
   .metrics { grid-template-columns: 1fr; }
   .details { grid-template-columns: 1fr; }
+  .station-grid { grid-template-columns: 1fr; }
 }
